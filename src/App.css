@@ -1,0 +1,266 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #6fb98f;
+  color: #d8d8d8;
+}
+
+nav {
+  margin: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: #2c7873;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d8d8d8;
+  text-decoration: none;
+  border-bottom: 0.05rem solid gray;
+}
+
+a {
+  color: rgb(15, 14, 14);
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: .3rem solid rgb(254, 112, 60);
+  border-right: none;
+  padding: .5rem;
+  height: 2rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: rgb(248, 90, 16);
+}
+
+.searchButton {
+  width: 4rem;
+  height: 3.6rem;
+  border: .1rem solid rgb(237, 136, 20);
+  background: rgb(250, 117, 7);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 .5rem .5rem 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.products {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+}
+.productsNav {
+  width: 10rem;
+  height: 8rem;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.productsNav a {
+  width: auto;
+  height: auto;
+  background-color: rgb(252, 153, 78);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.listOfProducts {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+}
+
+.productsList {
+  columns: 3 auto;
+  display: inline-block;
+}
+
+.productDisplay {
+  width: 30rem;
+  height: 30rem;
+  background-color: rgb(248, 242, 242);
+  cursor: pointer;
+  color: #000;
+}
+
+
+/* styling for home.js */
+.content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+p{
+  margin-top: 1rem;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btns{
+  margin-top: 2rem;
+  background-color: #d8d8d8;
+  cursor: pointer;
+  color: #191919;
+  padding: 1.2rem 2rem;
+  float: left;
+  border: 0;
+  border-radius: 2rem;
+  margin-left: 1rem;
+}
+
+.btns:hover{
+  background-color: rgb(248, 241, 242);
+  color: black;
+}
+
+img{
+  margin-top: 10rem;
+  margin-left: 17.5rem;
+  width: 30rem;
+  height: 30rem;
+  filter: grayscale(1)
+}
+
+img:hover{
+  filter: grayscale(0);
+  transition: 3s;
+  cursor: pointer;
+}
+
+/* styling for not found page */
+.not-found{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+
+/* styling pagination */
+
+.App-header {
+  background: #d8d8d8;
+  color: #000;
+}
+
+.pageNumbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pageNumbers li {
+  padding: 10px;
+  border: 1px solid rgb(14, 14, 14);
+  cursor: pointer;
+}
+
+.pageNumbers li.active {
+  background-color: white;
+  color: black;
+}
+
+.pageNumbers li button {
+  background-color: transparent;
+  border: none;
+  color: rgb(16, 16, 16);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.pageNumbers li button:hover {
+  background-color: white;
+  color: black;
+}
+.pageNumbers li button:focus {
+  outline: none;
+}
+
+.loadmore {
+  padding: 1rem;
+  background-color: transparent;
+  margin-top: 3rem;
+  color: rgb(11, 10, 10);
+  font-size: 1.2rem;
+  border: 1px solid rgb(245, 11, 11);
+  cursor: pointer;
+}
+
+.loadmore:hover {
+  background-color: rgb(188, 218, 142);
+  transition: 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 37.5em) {
+  /* find the difference rem and em */
+  html {
+    font-size: 50%;
+    overflow-x: auto;
+  }
+}
